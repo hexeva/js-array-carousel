@@ -129,3 +129,39 @@ arrowDown.addEventListener('click',function(){
     
 
 });
+// fine evento per arrow down
+
+// creo evento per arrow up
+
+const arrowUp = document.querySelector('.up');
+console.log(arrowUp);
+
+// creo evento per arrow up
+
+arrowUp.addEventListener('click',function(){
+
+     // rimuovo le classi active e on alle prime immagini
+
+     imgList[activeClass].classList.remove('active');
+     thumbList[activeClass].classList.remove('on');
+
+     // ora decremento activeClass di 1
+     
+    if ( activeClass > 0 ){
+
+        activeClass--;
+    
+        } else{
+            activeClass = items.length - 1;
+        }
+
+    imgList[activeClass].classList.add('active');
+
+     thumbList[activeClass].classList.add('on');
+
+
+
+
+
+});
+// fine evento arrow Up
