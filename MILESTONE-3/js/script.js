@@ -110,7 +110,14 @@ arrowDown.addEventListener('click',function(){
     
     // ora incremento activeClass di 1
 
+    if (activeClass < items.length - 1){
+
     activeClass++;
+
+    } else{
+        activeClass = 0;
+    }
+
 
     // ora aggiungo la classe all'immagine successiva
 
