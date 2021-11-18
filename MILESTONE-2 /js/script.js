@@ -65,7 +65,7 @@ for (let i = 0; i < items.length; i++){
     // creo la costante che mi popolerà il thumb
 
     const thumbCOntent =`
-    <div class="single-thumbnail"> 
+    <div class="single-thumbnail "> 
             <img src="${imgPath}" alt="img thumb">
     </div>
     `;
