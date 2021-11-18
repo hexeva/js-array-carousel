@@ -87,4 +87,12 @@ console.log(imgList);
 const thumbList = document.getElementsByClassName('single-thumbnail');
 console.log(thumbList);
 
+// adesso aggiungo le classi active alle due costanti precedenti
+// creo una variabile 
+let activeClass = 0;
+
+imgList[activeClass].classList.add('active','on');
+console.log(imgList);
+
+
 // ora devo generare un evento che al click vada ad aggiungere ad ogni elemnto della lista la classe active
