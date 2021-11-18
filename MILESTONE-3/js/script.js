@@ -48,7 +48,7 @@ for (let i = 0; i < items.length; i++){
     // creo la costante che popolerà l'html del main container
 
     const mainContent = `
-     <div class="main-img"> 
+     <div class="main-img "> 
             <img src="${imgPath}" alt="main img"> 
 
                       
@@ -79,3 +79,12 @@ for (let i = 0; i < items.length; i++){
 
 }
 // fine ciclo for
+
+// ora creo una variabile per tutte le immagini del main e del thumbnails utilizzando classNAme che genera una lista tipo array
+
+const imgList = document.getElementsByClassName('main-img');
+console.log(imgList);
+const thumbList = document.getElementsByClassName('single-thumbnail');
+console.log(thumbList);
+
+// ora devo generare un evento che al click vada ad aggiungere ad ogni elemnto della lista la classe active
