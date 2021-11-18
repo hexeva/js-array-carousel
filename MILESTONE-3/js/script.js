@@ -1,0 +1,81 @@
+
+// ARRAYS
+
+const items = [
+    'img/01.jpg',
+    'img/02.jpg',
+    'img/03.jpg',
+    'img/04.jpg',
+    'img/05.jpg'
+];
+
+const title = [
+    'Svezia',
+    'Svizzera',
+    'Gran Bretagna',
+    'Germania',
+    'Paradise'
+]
+
+const text = [
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+    'Lorem ipsum',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+    'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+]
+
+// SELEZIONO I CONTAINER CHE DOVRO' POPOLARE
+
+ const mainContainer = document.querySelector('.main-img-container');
+
+
+const imgText = document.querySelector('.img-text');
+
+
+const  thumbContainer = document.querySelector('.thumbnails');
+
+
+// controllo l'array immagini -testo e paragrafo con un ciclo for
+
+for (let i = 0; i < items.length; i++){
+    imgPath = items[i];
+    titlePath = title[i];
+    textPath = text[i];
+
+     
+
+    // creo la costante che popolerà l'html del main container
+
+    const mainContent = `
+     <div class="main-img"> 
+            <img src="${imgPath}" alt="main img"> 
+
+                      
+         <div class="img-text"> 
+            <h2>${titlePath}</h2> 
+                <p>${textPath}</p>
+        </div>
+    `;
+
+    // popolo il contenitore selezionato in precedenza
+
+    mainContainer.innerHTML += mainContent;  
+
+    // creo la costante che mi popolerà il thumb
+
+    const thumbCOntent =`
+    <div class="single-thumbnail "> 
+            <img src="${imgPath}" alt="img thumb">
+    </div>
+    `;
+
+    // vado ad appendere la costante creata nell'html
+
+    thumbContainer.innerHTML += thumbCOntent;
+
+
+
+
+}
+// fine ciclo for
