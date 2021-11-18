@@ -91,8 +91,10 @@ console.log(thumbList);
 // creo una variabile 
 let activeClass = 0;
 
-imgList[activeClass].classList.add('active','on');
+imgList[activeClass].classList.add('active');
 console.log(imgList);
+
+thumbList[activeClass].classList.add('on');
 
 
 // ora devo generare un evento che al click vada ad aggiungere ad ogni elemnto della lista la classe active

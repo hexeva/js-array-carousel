@@ -74,7 +74,7 @@ body{
 .single-thumbnail{
     width: 100%;
     height: 20%;
-    filter: opacity(0.7);
+    filter: opacity(0.3);
        
 }
 
@@ -93,7 +93,7 @@ body{
     width: 26px;
     height: 26px;
     color: black;
-    background-color: lightgrey;
+    background-color:lightgray;
     border-radius: 50%;
     right: 41%;
     transform: translateX(-41%);
@@ -101,6 +101,7 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: 10;
 }
 
 .arrows.up{
@@ -119,5 +120,5 @@ body{
 
 .single-thumbnail.on{
     filter: opacity(1);
-    border: 1px solid white;
+    border: 2px solid white;
 }
