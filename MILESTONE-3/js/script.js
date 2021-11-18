@@ -92,9 +92,33 @@ console.log(thumbList);
 let activeClass = 0;
 
 imgList[activeClass].classList.add('active');
-console.log(imgList);
 
 thumbList[activeClass].classList.add('on');
 
 
 // ora devo generare un evento che al click vada ad aggiungere ad ogni elemnto della lista la classe active
+
+// creo una variabile per le frecce
+const arrowDown = document.querySelector('.down');
+console.log(arrowDown);
+
+arrowDown.addEventListener('click',function(){
+    // rimuovo le classi active e on alle prime immagini
+
+    imgList[activeClass].classList.remove('active');
+    thumbList[activeClass].classList.remove('on');
+    
+    // ora incremento activeClass di 1
+
+    activeClass++;
+
+    // ora aggiungo la classe all'immagine successiva
+
+    imgList[activeClass].classList.add('active');
+
+    thumbList[activeClass].classList.add('on');
+
+
+    
+
+});
